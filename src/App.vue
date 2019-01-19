@@ -3,6 +3,7 @@
     
     <ListOfHotels  v-bind:hotels="hotels" v-bind:noOfNigths="noOfNigths"  v-on:getSelectedHotel="updateHotel($event)" v-bind:hotelID="hotelID"/>
     <hr>
+
     <HotelDetails v-if="hotelID !== '' " v-bind:noOfNigths="noOfNigths" v-on:changeNights="updateNoOfNights($event)" v-bind:hotelID="hotelID"/>
     
 
@@ -52,6 +53,9 @@ export default {
 </script>
 
 <style>
+body{
+      background-color: #f5f2ef;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -60,4 +64,5 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
 </style>
