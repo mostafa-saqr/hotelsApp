@@ -2,8 +2,10 @@
     <div class="col-md-12 text-center">
         <h3>Gallery</h3>
         <div class="gallery">
-            <img v-if="selectedPhoto == ''" v-bind:src="mainimg" alt="" width="400px" id="mainPhoto">
-            <img v-else v-bind:src="selectedPhoto" alt="" width="400px" id="mainPhoto">
+            
+            <img v-if="selectedPhoto == ''" v-bind:src="mainimg"  alt="" width="400px" id="mainPhoto">
+            <img v-else v-bind:src="selectedPhoto"  alt="" width="400px" id="mainPhoto">
+           
             <ul class="list-inline gallery">
                 <li class="list-inline-item" v-for="(img,index) in pictures"  v-bind:key="index">
                     <img v-bind:src="img.thumbnail" alt="" width="40px" v-bind:linkto="img.photo" v-on:click="getPhoto($event)">
@@ -45,6 +47,7 @@ export default {
     max-width: 400px;
     overflow-x: scroll;
     display: flex;
-        margin: 15px auto;
+    margin: 15px auto;
 }
+
 </style>

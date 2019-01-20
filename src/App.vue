@@ -1,9 +1,7 @@
 <template>
   <div id="app">
     
-    <ListOfHotels  v-bind:hotels="hotels" v-bind:noOfNigths="noOfNigths"  v-on:getSelectedHotel="updateHotel($event)" v-bind:hotelID="hotelID"/>
-    <hr>
-
+    <ListOfHotels class="mb-3"  v-bind:hotels="hotels" v-bind:noOfNigths="noOfNigths"  v-on:getSelectedHotel="updateHotel($event)" v-bind:hotelID="hotelID"/>
     <HotelDetails v-if="hotelID !== '' " v-bind:noOfNigths="noOfNigths" v-on:changeNights="updateNoOfNights($event)" v-bind:hotelID="hotelID"/>
     
 
@@ -55,6 +53,9 @@ export default {
 <style>
 body{
       background-color: #f5f2ef;
+}
+p{
+  margin-bottom: 0.1rem;
 }
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;

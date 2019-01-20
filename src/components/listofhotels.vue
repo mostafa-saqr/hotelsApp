@@ -9,7 +9,7 @@
                     <div class="media">
                         <img class="mr-4" v-bind:src="hotel.photo" alt="Generic placeholder image">
                         <div class="media-body ">
-                           <p>$ {{hotel.pricePerNight * noOfNigths}} for {{noOfNigths}}  
+                           <p><span class="text-success">$</span> <strong>{{hotel.pricePerNight * noOfNigths}}</strong> for {{noOfNigths}}  
                               <span v-if="noOfNigths < 2">night</span> <span v-else>nights</span>
                             </p>
                            <p>
@@ -48,3 +48,11 @@ export default {
     }
 }
 </script>
+<style  scoped>
+    .card-body{
+            box-shadow: 2px 2px 13px 0px rgba(128, 128, 128, 0.26);
+    }
+    .card-body:hover{
+            background: rgba(128, 128, 128, 0.11)
+    }
+</style>
