@@ -49,5 +49,8 @@ export default {
     display: flex;
     margin: 15px auto;
 }
+.gallery ul li {
+    cursor: pointer;
+}
 
 </style>
