@@ -1,10 +1,7 @@
 <template>
   <div id="app">
-    
     <ListOfHotels class="mb-3"  v-bind:hotels="hotels" v-bind:noOfNigths="noOfNigths"  v-on:getSelectedHotel="updateHotel($event)" v-bind:hotelID="hotelID"/>
     <HotelDetails v-if="hotelID !== '' " v-bind:noOfNigths="noOfNigths" v-on:changeNights="updateNoOfNights($event)" v-bind:hotelID="hotelID"/>
-    
-
   </div>
 </template>
 
